@@ -5,7 +5,11 @@ export const siteConfig = {
   description: "Gotta learn dude!",
   navItems: [
     {
-      label: "Hadith",
+      label: "Books",
+      href: "/books",
+    },
+    {
+      label: "Hadiths",
       href: "/hadith",
     },
     {
@@ -15,37 +19,28 @@ export const siteConfig = {
   ],
   navMenuItems: [
     {
-      label: "Profile",
-      href: "/profile",
+      label: "Books",
+      href: "/books",
     },
     {
-      label: "Dashboard",
-      href: "/dashboard",
+      label: "Quran",
+      href: "/Quran",
     },
     {
-      label: "Projects",
-      href: "/projects",
+      label: "About",
+      href: "/about",
     },
-    {
-      label: "Team",
-      href: "/team",
-    },
-    {
-      label: "Calendar",
-      href: "/calendar",
-    },
-    {
-      label: "Settings",
-      href: "/settings",
-    },
-    {
-      label: "Help & Feedback",
-      href: "/help-feedback",
-    },
-    {
-      label: "Logout",
-      href: "/logout",
-    },
+  ],
+  language: [
+    { key: 1, name: "Arabic", min: "Ar" },
+    { key: 2, name: "Bengali", min: "Be" },
+    { key: 3, name: "English", min: "En" },
+    { key: 4, name: "French", min: "Fr" },
+    { key: 5, name: "Indonesian", min: "In" },
+    { key: 6, name: "Russian", min: "Ru" },
+    { key: 7, name: "Tamil", min: "Ta" },
+    { key: 8, name: "Turkish", min: "Tu" },
+    { key: 9, name: "Urdu", min: "Ur" },
   ],
   links: {
     github: "https://github.com/xBirahim/LearnMyDin.git",

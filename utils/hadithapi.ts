@@ -1,5 +1,5 @@
 import HttpClient from "./httpclient";
-import { Edition } from "@/models/hadith/edition";
+import { Book } from "@/models/hadith/edition";
 
 export default class HadithApi {
   private baseUrl: string;
@@ -18,7 +18,7 @@ export default class HadithApi {
   }
 
   async getEditionByName(
-    editionName: string,
+    editionName: string | string[],
     minified: boolean = false
   ): Promise<any> {
     const endpoint = minified

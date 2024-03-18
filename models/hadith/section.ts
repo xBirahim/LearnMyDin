@@ -6,4 +6,4 @@ export default class Section {
         this[key] = sectionData[key];
       });
     }
-  }
+}

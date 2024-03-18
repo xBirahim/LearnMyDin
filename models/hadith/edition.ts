@@ -5,7 +5,7 @@ export interface IEdition {
   collection: Collection[];
 }
 
-export class Edition {
+export class Book {
     name: string;
     collection: Collection[];
 
