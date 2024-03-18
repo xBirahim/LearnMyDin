@@ -21,8 +21,8 @@ export default function IndexPage() {
   const navigateToSection = (section: string) => {
     // Utilisation de router.push pour naviguer vers la page souhaitée
     console.log(book);
-    
-    router.push(`/books/${book}/${section}`)
+
+    router.push(`/books/${book}/${section}`);
   };
   const hadithapi = new HadithApi();
 
@@ -116,13 +116,17 @@ export default function IndexPage() {
                         {metadata.section[key] ? metadata.section[key] : "..."}
                       </p>
                       <small className="text-xs text-default-400">
-                        {metadata.section_detail[key].hadithnumber_first} to{" "}
-                        {metadata.section_detail[key].hadithnumber_last}
+                        <>
+                          {metadata.section_detail[(key as unknown as number)].hadithnumber_first} to{" "}
+                          {metadata.section_detail[(key as unknown as number)].hadithnumber_last}
+                        </>
                       </small>
                     </>
                   }
                   indicator={<></>}
-                  onPress={(e) => {navigateToSection(key)}}
+                  onPress={(e) => {
+                    navigateToSection(key);
+                  }}
                   textValue={metadata.section[key]}
                 ></AccordionItem>
               );
