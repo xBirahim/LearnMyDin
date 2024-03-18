@@ -37,19 +37,18 @@ export default function IndexPage() {
 
   useEffect(() => {
     //Avec API
-    // // Supposons que hadithapi.getEditions() retourne une promesse qui résout avec les données d'édition
-    // hadithapi.getEditions().then((data) => {
-    //   // Transformez les données en objets Edition et mettez à jour l'état
-    //   const editionsData = Object.keys(data).map((key) => ObjectToEdition(data[key]));
-    //   setEditions(editionsData);
-    // });
-
-    // Sans API
-    const editionsData = editiondata.map((obj: any) => {
-      return ObjectToBook(obj[Object.keys(obj)[0]]);
+    // Supposons que hadithapi.getEditions() retourne une promesse qui résout avec les données d'édition
+    hadithapi.getEditions().then((data) => {
+      // Transformez les données en objets Edition et mettez à jour l'état
+      const editionsData = Object.keys(data).map((key) => ObjectToBook(data[key]));
+      setEditions(editionsData);
     });
 
-    setEditions(editionsData);
+    // // Sans API
+    // const editionsData = editiondata.map((obj: any) => {
+    //   return ObjectToBook(obj[Object.keys(obj)[0]]);
+    // });
+    // setEditions(editionsData);
 
     // test
     // console.log(selectedLanguage["currentKey"]);
@@ -162,3 +161,4 @@ export default function IndexPage() {
     </DefaultLayout>
   );
 }
+
